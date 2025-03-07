@@ -92,8 +92,8 @@ shuffle(sentences);
 // sentences.sort();
 // console.log(sentences);
 
-// sentences.push("Do geese see God?");
-// sentences.push(1);
+    sentences.push("Do geese see God?");
+    sentences.push(1);
 // console.log(sentences);
 
 
@@ -155,6 +155,57 @@ randNum.forEach((num, index) => visualize(num, index));
 function visualize(num, index){
     console.log("The element at index " + index + " is " + num);
 }
+
+
+//Question 11
+
+class myClass{
+    constructor(year, name, old){
+        this.year = year;
+        this.name = name;
+        this.old = old;
+    }
+
+    printObjs(){
+        console.log(this.year, this.name, this.old);
+    }
+
+}
+
+
+
+//Question 12
+
+
+const classObjs = [];
+
+const names = ["Alex", "Leo", "Lee", "Loucie", "Stella", "Julia"];
+const years = [1972, 2008, 2010, 2012, 1998, 2015];
+const yesOrNo = [true, false];
+
+for (let i = 0; i < 11; i++){
+
+    classObjs[i] = new myClass(years[Math.floor(Math.random()*years.length)], names[Math.floor(Math.random()*names.length)], yesOrNo[Math.floor(Math.random()*yesOrNo.length)]);
+    console.log(classObjs[i]);
+}
+
+const filteredPeople = classObjs.filter((person) => {
+    if(person.name.length < 5){
+        return person;
+    }
+});
+
+console.log(filteredPeople);
+
+mappedPeople = filteredPeople.map((person)=>{
+    person.year = person.year*person.year
+    return person
+});
+
+console.log(mappedPeople);
+
+
+
 
 
 

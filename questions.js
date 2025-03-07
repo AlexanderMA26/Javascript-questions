@@ -124,8 +124,37 @@ console.log(numb2);
 
 //Question 7
 
+const newNum = randNum.map(squareNumbers);
+function squareNumbers(num){
+    return num*num
+}
+console.log(newNum);
+
+//Question 8
+
+let maxNum = Math.max(...newNum);
+
+filteredNums = newNum.filter(filterNums);
+
+function filterNums(num){
+    if (num < maxNum/2){
+        return num
+    }
+}
+console.log(filteredNums);
 
 
+//Question 9
+const sum = filteredNums.reduce((a,b)=>a+b);
+console.log(sum);
+
+//Question 10
+
+randNum.forEach((num, index) => visualize(num, index));
+
+function visualize(num, index){
+    console.log("The element at index " + index + " is " + num);
+}
 
 
 

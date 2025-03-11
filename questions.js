@@ -212,15 +212,6 @@ mappedPeople.forEach(person => {
     }
 });
 
-function compare( a, b ) {
-    if ( a.name < b.name ){
-      return -1;
-    }
-    if ( a.name > b.name ){
-      return 1;
-    }
-    return 0;
-  }
-  
-  selectedPeople.sort( compare );
-  console.log(selectedPeople);
+selectedPeople.sort((a, b) => a.name.localeCompare(b.name));
+
+console.log(selectedPeople);
